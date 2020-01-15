@@ -112,7 +112,7 @@ module.exports.run = async (bot, message, args) => {
             });
         }
         else{
-            alertchan.send(`Severity: Green :partying_face:`)
+            alertchan.send(`Severity: Green :partying_face:`).then(msg.delete(59*1000))
         }
     });
 
