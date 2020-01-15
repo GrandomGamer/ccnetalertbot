@@ -56,4 +56,4 @@ bot.on('ready', () => {
     setInterval(run, 60*1000);
 });
 //Login Bot
-bot.login('NjY2ODE5NTE3NjA2Nzg5MTIx.Xh5uFg.HWf-tzIQ3CV2E9JY1SYZFndPlcM');
+bot.login(process.env.BOT_TOKEN);
