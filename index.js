@@ -51,6 +51,9 @@ bot.on('ready', () => {
     function run() {
       bot.commands.get('alert').run(bot)
       console.log(bot.commands)
+      const fetched = await alertchan.fetchMessages();
+      console.log(fetched)
+      alertchan.bulkDelete(fetched)
     }
     run();
     setInterval(run, 60*1000);
