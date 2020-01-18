@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
                 message.sender.send(`X Coordinate: ${arr[i].x}\nY Coordinate: ${arr[i].y}\nZ Coordinate: ${arr[i].z}`)
             }
             else{
-                message.sender.send(`Player not found! :cry:`)
+                message.author.send(`Player not found! :cry:`)
             }
 
         }
