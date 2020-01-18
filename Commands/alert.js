@@ -1,3 +1,4 @@
+  
 const request = require("request");
 const Discord = require("discord.js");
 
@@ -9,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
         [-13448,-3479]
     ];
     let il = [
-        "GrandomGamer",
         "DenFish",
+        "GrandomGamer",
         "PappaBlaze",
         "qpu"
     ]
@@ -39,10 +40,7 @@ module.exports.run = async (bot, message, args) => {
                 function found(name){
                     for(var x in il){
                         let name = il[x].toUpperCase()
-                        console.log(name)
-                        console.log(arr[i].account)
                         let z = x+1
-                        console.log(il.length)
                         if (name === arr[i].account.toUpperCase()){
                             return true
                         }
