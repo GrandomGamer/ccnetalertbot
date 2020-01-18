@@ -39,10 +39,12 @@ module.exports.run = async (bot, message, args) => {
                 function found(name){
                     for(var x in il){
                         let name = il[x].toUpperCase()
+                        console.log(name)
+                        console.log(arr[i].account)
                         if (name === arr[i].account.toUpperCase()){
                             return true
                         }
-                        else{
+                        else if{il.length = (x+1)){
                             return false
                         }
                     }
