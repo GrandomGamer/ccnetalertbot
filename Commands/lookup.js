@@ -2,7 +2,7 @@ const request = require("request");
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    const sender = message.author
+    let sender = message.author;
     request("https://map.ccnetmc.com/standalone/dynmap_earth.json?", (error, response, body) => {
         const data = JSON.parse(body);
         let arr = data.players
@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
             }
 
         }
+
     })
 }
 module.exports.help = {
