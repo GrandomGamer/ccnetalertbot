@@ -7,11 +7,14 @@ module.exports.run = async (bot, message, args) => {
         const data = JSON.parse(body);
         let arr = data.players
         for(var i in arr){
-            if ((arr[i].account.toUpperCase()) || (arr[i].nickname.toUpperCase()) == args[1]){
+            if ((arr[i].account.toUpperCase()) == args[1]){
                 sender.send(`X Coordinate: ${arr[i].x}\nY Coordinate: ${arr[i].y}\nZ Coordinate: ${arr[i].z}`)
+                console.log(arr[i].account.toUpperCase())
+                return;
             }
             else{
                 sender.send(`Player not found! :cry:`)
+                return;
             }
 
         }
