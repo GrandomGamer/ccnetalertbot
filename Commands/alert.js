@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
                         if (name === arr[i].account.toUpperCase()){
                             return true
                         }
-                        else if{il.length = (x+1)){
+                        else if(il.length = (x+1)){
                             return false
                         }
                     }
