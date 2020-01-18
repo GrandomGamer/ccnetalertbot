@@ -41,6 +41,8 @@ module.exports.run = async (bot, message, args) => {
                         let name = il[x].toUpperCase()
                         console.log(name)
                         console.log(arr[i].account)
+                        console.log((x+1))
+                        console.log(il.length)
                         if (name === arr[i].account.toUpperCase()){
                             return true
                         }
