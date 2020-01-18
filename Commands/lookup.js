@@ -4,7 +4,6 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     request("https://map.ccnetmc.com/standalone/dynmap_earth.json?", (error, response, body) => {
         const data = JSON.parse(body);
-    })
         let arr = data.players
         for(var i in arr){
             if ((arr[i].account.toUpperCase()) || (arr[i].nickname.toUpperCase()) == args[1]){
@@ -15,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
             }
 
         }
-
+    })
 }
 module.exports.help = {
     name: "alert"
