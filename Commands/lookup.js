@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         let arr = data.players
         for(var i in arr){
             if ((arr[i].account.toUpperCase()) || (arr[i].nickname.toUpperCase()) == args[1]){
-                message.sender.send(`X Coordinate: ${arr[i].x}\nY Coordinate: ${arr[i].y}\nZ Coordinate: ${arr[i].z}`)
+                message.author.send(`X Coordinate: ${arr[i].x}\nY Coordinate: ${arr[i].y}\nZ Coordinate: ${arr[i].z}`)
             }
             else{
                 message.author.send(`Player not found! :cry:`)
