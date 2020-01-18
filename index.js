@@ -53,7 +53,6 @@ bot.on('ready', () => {
       bot.commands.get('alert').run(bot)
       console.log(bot.commands)
       const fetched = await alertchan.fetchMessages();
-      console.log(fetched)
       alertchan.bulkDelete(fetched)
     }
     run();
