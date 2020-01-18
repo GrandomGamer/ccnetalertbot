@@ -8,6 +8,12 @@ module.exports.run = async (bot, message, args) => {
         [-12872,-3767],
         [-13448,-3479]
     ];
+    let il = [
+        "GrandomGamer",
+        "DenFish",
+        "PappaBlaze",
+        "qpu"
+    ]
     let distarr = []
     let severity = 'Green'
     request("https://map.ccnetmc.com/standalone/dynmap_earth.json?", (error, response, body) => {
@@ -30,12 +36,23 @@ module.exports.run = async (bot, message, args) => {
                     severity = 'Yellow'
                     arraypush()
                 }
+                function found(name){
+                    for(var x in il){
+                        let name = il[x].toUpperCase()
+                        if (name === arr[i].account.toUpperCase()){
+                            return true
+                        }
+                        else{
+                            return false
+                        }
+                    }
+                }
                 function arraypush() {
-                    if (dist <= 300 && z == 0){
+                    if (dist <= 300 && z == 0 && found(arr[i].acocunt) == false){
                         arrpush = [Math.round(dist),'Torreon',arr[i].account,arr[i].name]
                         distarr.push(arrpush)
                     }
-                    else if(dist <= 300 && z == 1){
+                    else if(dist <= 300 && z == 1 && found(arr[i].acocunt) == false){
                         arrpush = [Math.round(dist),'Nuevo',arr[i].account,arr[i].name]
                         distarr.push(arrpush)
                     }
@@ -107,14 +124,9 @@ module.exports.run = async (bot, message, args) => {
                     page--;
                     newEmbed(page, r)
                 });
-        
+                
                 msg.delete(59*1000)
             });
-        }
-        else{
-            alertchan.send(`Severity: Green :partying_face:`).then(async msg => {
-                msg.delete(59*1000)
-            })
         }
     });
 
