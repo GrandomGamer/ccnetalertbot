@@ -48,7 +48,7 @@ bot.on('message', message =>{
 //Listener for bot start.
 bot.on('ready', () => {
     console.log('Bot Running.')
-    function run() {
+    async function run() {
       let alertchan = bot.channels.get('666838078350163978')
       bot.commands.get('alert').run(bot)
       console.log(bot.commands)
