@@ -4,7 +4,6 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     request("https://map.ccnetmc.com/standalone/dynmap_earth.json?", (error, response, body) => {
         const data = JSON.parse(body);
-        console.log(data)
     })
         let arr = data.players
         for(var i in arr){
