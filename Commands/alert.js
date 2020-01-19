@@ -125,7 +125,7 @@ module.exports.run = async (bot, message, args) => {
                 });
         
                 pagedown.on('collect', r => {
-                    if (page === 2 || page === 1) return;
+                    if (page === 1) return;
                     page--;
                     newEmbed(page, r)
                 });
