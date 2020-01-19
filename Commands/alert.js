@@ -18,6 +18,7 @@ module.exports.run = async (bot, message, args) => {
     let distarr = []
     let severity = 'Green'
     request("https://map.ccnetmc.com/standalone/dynmap_earth.json?", (error, response, body) => {
+        var z = 0
         const data = JSON.parse(body);
         let arr = data.players
         for(var i in arr){
@@ -40,7 +41,9 @@ module.exports.run = async (bot, message, args) => {
                 function found(name){
                     for(var x in il){
                         let name = il[x].toUpperCase()
-                        let z = x+1
+                        console.log(il.length)
+                        z++;
+                        console.log(z)
                         if (name === arr[i].account.toUpperCase()){
                             return true
                         }
