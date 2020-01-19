@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) => {
         "GrandomGamer",
         "PappaBlaze",
         "qpu",
-        "Grimjaw59"
+        "Grimjaw59",
+        "Blaze49023"
     ]
     let distarr = []
     let severity = 'Green'
