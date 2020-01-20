@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         let arr = data.players
         for(var i in arr){
             z++;
-            if ((arr[i].account.toUpperCase()) == args[1]){
+            if ((arr[i].account.toUpperCase()) == args[0]){
                 sender.send(`X Coordinate: ${arr[i].x}\nY Coordinate: ${arr[i].y}\nZ Coordinate: ${arr[i].z}`)
                 console.log(arr[i].account.toUpperCase())
                 return;
