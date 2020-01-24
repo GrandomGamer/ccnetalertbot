@@ -1,6 +1,6 @@
 const request = require("request");
 const Trello = require("trello")
-var trello = new Trello("b5e7ea4b49b2dace06743a4f27cb96f4","391ff1f537dc143f7ef6d24c7ef4fa69547dea8e44143197224744916fa26d2c")
+var trello = new Trello(process.env.TKEY_1,process.env.TKEY_2)
 var board = 'CcPX6dI1';
 let running = false
 module.exports.run = async (message, args) => {
