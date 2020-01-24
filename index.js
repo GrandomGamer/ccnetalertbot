@@ -48,15 +48,21 @@ bot.on('message', message =>{
 //Listener for bot start.
 bot.on('ready', () => {
     console.log('Bot Running.')
-    async function run() {
+    async function run(){
       let alertchan = bot.channels.get('666838078350163978')
-      bot.commands.get('alert').run(bot)
-      console.log(bot.commands)
+      let commandfile = bot.commands.get('alert')
+      if(commandfile) commandfile.run(bot)
       const fetched = await alertchan.fetchMessages();
       alertchan.bulkDelete(fetched)
     }
-    run();
-    setInterval(run, 60*1000);
+    async function towns(){
+      let alertchan = bot.channels.get('666838078350163978')
+      let commandfile = bot.commands.get('town')
+      if(commandfile) commandfile.run('Auto')
+    }
+    //run();
+    setInterval(run, 59*3000);
+    setInterval(towns, 3000)
 });
 //Login Bot
 bot.login(process.env.BOT_TOKEN);
