@@ -60,7 +60,7 @@ bot.on('ready', () => {
       let commandfile = bot.commands.get('town')
       if(commandfile) commandfile.run('Auto')
     }
-    //run();
+    run();
     setInterval(run, 59*3000);
     setInterval(towns, 3000)
 });
