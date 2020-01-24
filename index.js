@@ -61,7 +61,7 @@ bot.on('ready', () => {
       if(commandfile) commandfile.run('Auto')
     }
     run();
-    setInterval(run, 59*3000);
+    setInterval(run, 59*1000);
     setInterval(towns, 3000)
 });
 //Login Bot
