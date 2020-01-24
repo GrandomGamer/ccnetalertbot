@@ -110,7 +110,7 @@ module.exports.run = async (bot, message, args) => {
                     .setColor(5301186)
                     .setThumbnail("https://pbs.twimg.com/media/CmOsJDmWEAAHW2b.jpg")
                     .addField('Name:', distarr[num-1][0], true)
-                    .addField('Nickname:', distarr[num-1][2], true)
+                    .addField('Nickname:', distarr[num-1][1], true)
                     .addField('Distance:', distarr[num-1][2], true)
                     .addField('Town:', emtown, true)
                     msg.message.edit({embed: people})
