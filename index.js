@@ -61,6 +61,7 @@ bot.on('ready', () => {
       if(commandfile) commandfile.run('Auto')
     }
     run();
+    towns();
     setInterval(run, 59*1000);
     setInterval(towns, 3000)
 });
