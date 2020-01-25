@@ -22,6 +22,7 @@ module.exports.run = async (message, args) => {
                         let precountry = chunks[4].split(' ')
                         let country = precountry[1].split(')')[0].substr(0,precountry[1].length-5)
                         if(country === 'Mexico'){
+                            console.log('Updating')
                             let pretown = arr[x].label.split(' ')
                             let town = pretown[0]
                             let mayor = chunks[14].substr(0,chunks[14].length-6)
