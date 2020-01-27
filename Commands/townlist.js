@@ -9,6 +9,7 @@ module.exports.run = async (message, args) => {
         let n = 0
         run()
         async function run(){
+            console.log('Running')
             request("https://map.ccnetmc.com/standalone/dynmap_earth.json?",async function(error, response, body){
                 const data = JSON.parse(body);
                 let arr = data.updates
