@@ -9,7 +9,6 @@ module.exports.run = async (message, args) => {
         let n = 0
         run()
         async function run(){
-            console.log('Running')
             request("https://map.ccnetmc.com/standalone/dynmap_earth.json?",async function(error, response, body){
                 const data = JSON.parse(body);
                 let arr = data.updates
@@ -23,7 +22,6 @@ module.exports.run = async (message, args) => {
                         let precountry = chunks[4].split(' ')
                         let country = precountry[1].split(')')[0].substr(0,precountry[1].length-5)
                         if(country === 'Mexico'){
-                            console.log('Updating')
                             let pretown = arr[x].label.split(' ')
                             let town = pretown[0]
                             let mayor = chunks[14].substr(0,chunks[14].length-6)
