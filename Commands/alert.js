@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         ts.push(lists[l]['name'])
     }
     let page = 0;
-    let alertchan = bot.channels.get('666838078350163978')
+    let alertchan = bot.channels.get('675909769185198098')
     let severity = 'Green'
     let distarr = []
     let peparr = []
@@ -74,11 +74,11 @@ module.exports.run = async (bot, message, args) => {
         }
         if(distarr.length >= 1){
             if (severity == 'Red'){
-                alertchan.send(`-=-=-= Severity: Red =-=-=-\n@everyone`)
+                alertchan.send(`-=-=-= Severity: Red =-=-=-\n<@&675909681931354139>`)
                 send()
             }
             else if(severity == 'Orange'){
-                alertchan.send(`-=-=-= Severity: Orange =-=-=-\n<@&664210857923706974>`)
+                alertchan.send(`-=-=-= Severity: Orange =-=-=-`)
                 send()
             }
             else if(severity == 'Yellow'){
