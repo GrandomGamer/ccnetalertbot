@@ -49,14 +49,14 @@ bot.on('message', message =>{
 bot.on('ready', () => {
     console.log('Bot Running.')
     async function run(){
-      let alertchan = bot.channels.get('666838078350163978')
+      let alertchan = bot.channels.get('675909769185198098')
       let commandfile = bot.commands.get('alert')
       if(commandfile) commandfile.run(bot)
       const fetched = await alertchan.fetchMessages();
       alertchan.bulkDelete(fetched)
     }
     async function towns(){
-      let alertchan = bot.channels.get('666838078350163978')
+      let alertchan = bot.channels.get('675909769185198098')
       let commandfile = bot.commands.get('town')
       if(commandfile) commandfile.run('Auto')
     }
